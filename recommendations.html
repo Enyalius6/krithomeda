@@ -9,7 +9,19 @@
     <h2>Top 5 Recommended Places</h2>
     <ul>
         {% for place in recommended_places %}
-        <li>{{ place }}</li>
+        <li>
+            <h3>{{ place }}</h3>
+            <ul>
+                {% for forecast in forecast_report[loop.index0] %}
+                <li>
+                    <strong>Date:</strong> {{ forecast.date }}<br>
+                    <strong>Max Temp (°C):</strong> {{ forecast.max_temp_c }}<br>
+                    <strong>Min Temp (°C):</strong> {{ forecast.min_temp_c }}<br>
+                    <strong>Condition:</strong> {{ forecast.condition }}
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
         {% endfor %}
     </ul>
 </body>

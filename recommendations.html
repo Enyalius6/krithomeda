@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Recommended Places</title>
+</head>
+<body>
+    <h2>Top 5 Recommended Places</h2>
+    <ul>
+        {% for place in recommended_places %}
+        <li>{{ place }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
